@@ -5,7 +5,7 @@ Wenn ein Repository für Lösungen verfügbar wird, dann wird hier und in Moodle
 
 ## Aktuelle Aufgabenstellung
 
-[1. Übung](./First_Exercise.md)
+[1. Übung](./First_Exercise.md)  
 [2. Übung](./Second_Exercise.md)
 
 ## Links zu Lösungen
