@@ -64,23 +64,22 @@ Console.WriteLine(euroMoney);
 
 ---
 
-euroMoney.TotalCents = 530 
+euroMoney.TotalCents = 530  
 euroMoney.Cents = 30  
 euroMoney.EuroAmount = 5  
-Euro: 5, Cents: 30  
+530  
 euroMoney.TotalCents = -190  
 euroMoney.Cents = -90  
 euroMoney.EuroAmount = -1  
-Euro: -1, Cents: -90  
+-190  
 euroMoney.TotalCents = 510  
-euroMoney.Cents = 10  
-euroMoney.EuroAmount = 5  
-Euro: 5, Cents: 10  
+euroMoney.Cents = 10
+
 
 ---
 
 
-## 5. Implementierung von + und - operator
+## 2. Implementierung von + und - operator
 
 Es soll nun möglich sein, Instanzen der Klasse mit einander zu addieren und subtrahieren.
 Dazu müssen die Operatoren + und - überladen werden. Dabei soll ein neue Instance entstehen welche 
@@ -117,7 +116,7 @@ euroMoney -= summand; euroMoney = Euro: 2, Cents: 80
 
 ---
 
-## 5.1 Implementierung von + und - Operatoren mit einen anderen Datentypen
+## 2.1 Implementierung von + und - Operatoren mit einen anderen Datentypen
 
 Nun soll die Operatoren + und - auch überladen werden mit Berechnung von Integer Werten und Euro Instanzen.
 
@@ -143,7 +142,7 @@ Console.WriteLine($"120 - 200 = {120 - euro}");
 
 ---
 
-## 6. Implementierung von ++ und -- operator
+## 3. Implementierung von ++ und -- operator
 
 Nun soll der Operator ++ und -- noch implementiert werden.
 
@@ -166,7 +165,7 @@ euroMoney++; euroMoney = Euro: 0, Cents: -1
 
 ---
 
-## 7. Implementierung von implicit und explicit Cast
+## 4. Implementierung von implicit und explicit Cast
 
 - Implementiere nun eine implizite Conversion so dass eine Euro Instanze zu einem long Wert konvertiert werden kann. Dabei soll der Cast nicht explizit aufgerufen werden müssen.  
 - Implementiere nun eine explizite Conversion so dass eine Euro Instanze in einen bool Wert konvertiert werden kann. Der boolean ist false falls der Geldbetrag negative ist, ansonsten true. Dabei muss dann der Cast explizit aufgerufen werden.
