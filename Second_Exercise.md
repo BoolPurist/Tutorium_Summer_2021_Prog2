@@ -2,12 +2,12 @@
 
 ## Einfügung
 
-Gerade wenn es ums Geld mit hohen Beträgen geht, die Ungenauigkeiten durch Rundungen können teuer werden. Deshalb implementiere eine Klasse welche komplett ohne Kommazahlen aus kommt. Dabei wollen wir mit Hilfe von Operator Overloading und Properties noch eine besonderen komfortablen Umgang mit dieser Klasse ermöglichen.
+Gerade wenn es ums Geld mit hohen Beträgen geht, können die Ungenauigkeiten durch Rundungen teuer werden. Deshalb implementiere eine Klasse welche komplett ohne Kommazahlen aus kommt. Dabei wollen wir mit Hilfe von Operator Overloading und Properties noch eine besonderen komfortablen Umgang mit dieser Klasse ermöglichen.
 
 ---
 ## 1. Klasse Euro mit Properties und der Methode ToString
 
-Eine Instance der Klasse Euro soll mit folgenden Konstruktor erstellt werden:
+Eine Instance der Klasse Euro soll mit folgenden Konstruktoren erstellt werden:
 
 ```C#
 public Euro(long euro,long cents)
@@ -64,16 +64,18 @@ Console.WriteLine(euroMoney);
 
 ---
 
-euroMoney.TotalCents = 530  
-euroMoney.Cents = 30  
-euroMoney.EuroAmount = 5  
-530  
-euroMoney.TotalCents = -190  
-euroMoney.Cents = -90  
-euroMoney.EuroAmount = -1  
--190  
-euroMoney.TotalCents = 510  
-euroMoney.Cents = 10
+euroMoney.TotalCents = 530 \
+euroMoney.Cents = 30 \
+euroMoney.EuroAmount = 5 \
+Euro: 5, Cents: 30 \
+euroMoney.TotalCents = -190 \
+euroMoney.Cents = -90 \
+euroMoney.EuroAmount = -1 \
+Euro: -1, Cents: -90 \
+euroMoney.TotalCents = 510 \
+euroMoney.Cents = 10 \
+euroMoney.EuroAmount = 5 \
+Euro: 5, Cents: 10 
 
 
 ---
@@ -82,7 +84,7 @@ euroMoney.Cents = 10
 ## 2. Implementierung von + und - operator
 
 Es soll nun möglich sein, Instanzen der Klasse mit einander zu addieren und subtrahieren.
-Dazu müssen die Operatoren + und - überladen werden. Dabei soll ein neue Instance entstehen welche 
+Dazu müssen die Operatoren + und - überladen werden. Dabei soll eine neue Instance entstehen, welche 
 das Ergebnis aus der Addition/Subtraktion darstellt.
 
 Hier ein Link zum Thema als Overloading:
@@ -108,10 +110,10 @@ Console.WriteLine($"euroMoney -= summand; euroMoney = {euroMoney}");
 
 ---
 
-euroMoney + summand = Euro: 4, Cents: 30  
-euroMoney - summand = Euro: 1, Cents: 30  
+euroMoney + summand = Euro: 4, Cents: 30
+euroMoney - summand = Euro: 1, Cents: 30 
 summand - euroMoney = Euro: -1, Cents: -30  
-euroMoney += summand; euroMoney = Euro: 4, Cents: 30  
+euroMoney += summand; euroMoney = Euro: 4, Cents: 30 
 euroMoney -= summand; euroMoney = Euro: 2, Cents: 80
 
 ---
@@ -168,7 +170,7 @@ euroMoney++; euroMoney = Euro: 0, Cents: -1
 ## 4. Implementierung von implicit und explicit Cast
 
 - Implementiere nun eine implizite Conversion so dass eine Euro Instanze zu einem long Wert konvertiert werden kann. Dabei soll der Cast nicht explizit aufgerufen werden müssen.  
-- Implementiere nun eine explizite Conversion so dass eine Euro Instanze in einen bool Wert konvertiert werden kann. Der boolean ist false falls der Geldbetrag negative ist, ansonsten true. Dabei muss dann der Cast explizit aufgerufen werden.
+- Implementiere nun eine explizite Conversion so dass eine Euro Instanze in einen bool Wert konvertiert werden kann. Der boolean ist false, falls der Geldbetrag negative ist, ansonsten true. Dabei muss dann der Cast explizit aufgerufen werden.
 
 Hier ein Link wie das mit den Casting funktioniert: 
 
