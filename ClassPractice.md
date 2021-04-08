@@ -18,7 +18,26 @@ Attribute welche auch ausserhalb der Klasse noch verändert werden sollen.
 - Number (Anzahl des Produktes)
 ---
 
-## Implementierung von Methods und Getters
+*Test Program:*
+
+```C#
+
+Product dummyProduct = new Product("Dummy", 0.0, 0);
+Product dummyProduct1 = new Product("Dummy", 0.0, 0);
+Product product = new Product("TV", 8000.0, 2);
+Console.WriteLine($"product.ID = {product.ID}");
+Console.WriteLine($"product.Name = {product.Name}");
+Console.WriteLine($"product.SinglePrice = {product.SinglePrice}");
+
+```
+
+*Ausgabe sollte sein:*
+
+product.ID = 2 \
+product.Name = TV \
+product.SinglePrice = 8000 
+
+---
 
 ### 2 Implementierung von Property **WholePrice**
 
