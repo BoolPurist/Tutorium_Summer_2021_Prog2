@@ -20,20 +20,7 @@ Attribute welche auch ausserhalb der Klasse noch verändert werden sollen.
 
 ## Implementierung von Methods und Getters
 
-### 2 Implementierung von Methods **GetProductInfo**
-
-Gibt einen string zurück, welche ein Produkt als Text darstellt.
-
-```C#
-Product product = new Product("Gurke", 0.5, 10);
-Console.WriteLine($"product.GetProductInfo() = {product.GetProductInfo()}");
-```
-
-*Ausgabe sollte sein:*
-
-> product.GetProductInfo() = Gurke, Single price: 0.5$, x10 = 5$
----
-### 3 Implementierung von Property **WholePrice**
+### 2 Implementierung von Property **WholePrice**
 
 Getter welche die gesamte Summe aller Einzelpreise eines Produktes zurück gibt.
 
@@ -47,6 +34,22 @@ Console.WriteLine($"product.WholePrice = {product.WholePrice}");
 *Ausgabe sollte sein:*
 
 > product.WholePrice = 10
+
+---
+
+### 3 Implementierung von Methods **GetProductInfo**
+
+Gibt einen string zurück, welche ein Produkt als Text darstellt.
+
+```C#
+Product product = new Product("Gurke", 0.5, 10);
+Console.WriteLine($"product.GetProductInfo() = {product.GetProductInfo()}");
+```
+
+*Ausgabe sollte sein:*
+
+> product.GetProductInfo() = Gurke, Single price: 0.5$, x10 = 5$
+
 ---
 ### 4 Implementiere eine Methode namens **GetWholePrice**
 
