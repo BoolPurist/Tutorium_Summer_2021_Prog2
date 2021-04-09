@@ -16,7 +16,7 @@ Diese Attribute sollen ausserhalb der Klasse abgerufen werden können aber nicht
 Attribute welche auch ausserhalb der Klasse noch verändert werden sollen.
 
 - Number (Anzahl des Produktes)
----
+---gi
 
 *Test Program:*
 
