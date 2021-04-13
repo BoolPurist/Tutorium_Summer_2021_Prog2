@@ -1,0 +1,23 @@
+{
+  "name": "Tutorium_Summer_2021_Prog2",
+  "version": "1.0.0",
+  "description": "Hier befinden sich alle Aufgabenstellungen zu dem Tutorium. Die Lösungen zu den Aufgaben werden in separaten Repositories bereitgestellt.\r Wenn ein Repository für Lösungen verfügbar wird, dann wird hier und in Moodle ein Link dazu angezeigt.",
+  "main": "index.js",
+  "scripts": {
+    "mdToPdf": "node ./js/convertMdToPdf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoolPurist/Tutorium_Summer_2021_Prog2.git"
+  },
+  "keywords": [],
+  "author": "BoolPurist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BoolPurist/Tutorium_Summer_2021_Prog2/issues"
+  },
+  "homepage": "https://github.com/BoolPurist/Tutorium_Summer_2021_Prog2#readme",
+  "dependencies": {
+    "md-to-pdf": "^3.3.2"
+  }
+}
