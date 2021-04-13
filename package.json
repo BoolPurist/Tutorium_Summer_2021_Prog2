@@ -1,10 +1,12 @@
 {
-  "name": "Tutorium_Summer_2021_Prog2",
+  "name": "tutorium_summer-2021-prog2",
   "version": "1.0.0",
   "description": "Hier befinden sich alle Aufgabenstellungen zu dem Tutorium. Die Lösungen zu den Aufgaben werden in separaten Repositories bereitgestellt.\r Wenn ein Repository für Lösungen verfügbar wird, dann wird hier und in Moodle ein Link dazu angezeigt.",
   "main": "index.js",
   "scripts": {
-    "mdToPdf": "node ./js/convertMdToPdf.js"
+    "mdToPdf": "node ./js/convertMdToPdf.js",
+    "createMdFile": "node ./js/templateMd.js",
+    "appendToMdFile": "node ./js/templateMd.js appendTo"
   },
   "repository": {
     "type": "git",
