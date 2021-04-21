@@ -39,12 +39,22 @@ Füge folgende Code ein in die Klasse, wo auch der Test Code aus dieses Aufgaben
 ```C#
 static void PrintList(TextCollection collection) 
 {
-    foreach (string element in collection.GetArray())
-    {
-        Console.WriteLine(element);
-    }
+    string[] array = collection.GetArray();
 
-    Console.WriteLine(new String('=', 30));
+    if (array != null)
+    {
+        int count = 0;
+        foreach (string element in collection.GetArray())
+        {
+            Console.WriteLine($"Element {count}: {element}");
+            count++;
+        }
+        Console.WriteLine(new String('=', 30));
+    }
+    else
+    {
+        Console.WriteLine("List is empty");
+    }
 }
 ```
 <div class="page-break"></div>
@@ -114,17 +124,17 @@ PrintList(collection);
 **Erwarteter Output:**
 
 Testing Pop \
+collection.Pop() =  \
+List is empty  \
+collection.Pop() = 2  \
+Element 0: 0  \
+Element 1: 1  \
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  \
+collection.Pop() = 1  \
+collection.Pop() = 0  \
+List is empty  \
 collection.Pop() = \
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \
-collection.Pop() = 2 \
-Element 0: 0 \
-Element 1: 1 \
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \
-collection.Pop() = 1 \
-collection.Pop() = 0 \
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \
-collection.Pop() = \
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+List is empty
 
 <div class="page-break"></div>
 
@@ -213,13 +223,13 @@ PrintList(collection);
 **Erwarteter Output:**
 
 Testing Indexer \
-collection[-2] = \ 
+collection[-2] = \
 collection[0] = 0 \
 collection[1] = 1 \
 collection[2] = 2 \
 collection[3] = \
-Element 0: 0 \ 
-Element 1: -1 \ 
+Element 0: 0 \
+Element 1: -1 \
 Element 2: 2 \
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -275,8 +285,8 @@ PrintList(collection);
 
 **Erwarteter Output:**
 
-Testing RemoveAt \
-Element 0: 0 \
+Testing RemoveAt \ 
+Element 0: 0 \ 
 Element 1: 1 \
 Element 2: 2 \
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \
@@ -285,4 +295,4 @@ Element 1: 2 \
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \
 Element 0: 2 \
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+List is empty
