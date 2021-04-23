@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Hier befinden sich alle Aufgabenstellungen zu dem Tutorium. Die Lösungen zu den Aufgaben werden in separaten Repositories bereitgestellt.\r Wenn ein Repository für Lösungen verfügbar wird, dann wird hier und in Moodle ein Link dazu angezeigt.",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "mdToPdf": "node ./js/convertMdToPdf.js",
     "createMdFile": "node ./js/templateMd.js",

@@ -173,7 +173,6 @@ collection.Count = 2
 
 <div class="page-break"></div>
 
-
 ## 4. Implementierung von einem Indexer
 
 **Beschreibung**:
