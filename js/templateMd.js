@@ -28,6 +28,9 @@ const template = `
 
 
 ---
+
+<div class="page-break"></div>
+
 `;
 const initTemplatePart =`
 # 
