@@ -1,0 +1,212 @@
+
+# 6. Übung Thema: Binärer Baum
+
+**Einführung:**
+
+Um das Thema erweiterbare Datenstrukturen abzuschließen werden hier noch zu Teilen einen Binäre Baum implementieren.
+Diese Datenstrukturen erlauben besonderes effiziente Suchen oder Sortierung von Sequenzen.
+
+
+Bei den Testprogrammen werden wir auf eine bereits erstellte Implementierung von GetStringArray aus dem
+5\.Aufgabenblatt zugreifen. Der Code ist hier unten bei gefügt:
+
+```C#
+static string GetStringArray(int[] array)
+{
+    if (array == null || array.Length == 0)
+    {
+    return "[]";
+    }
+    else
+    {
+    string endText = "[ ";
+
+    foreach (int number in array)
+    {
+        endText += $"{number} ";
+    }
+
+    return endText + "]";
+    }
+}
+```
+
+## 1. Implementierung der Methoden  Insert und ReturnValues in Klasse NumberBinaryTree
+
+**Beschreibung:**
+
+Der Name der Klasse lautet NumberBinaryTree. 
+
+Es soll zuerst die Methode Insert implementiert werden. Diese Methode soll eine Integer annehmen und diesen als Node
+in einen Binären Baum eingefügt werden. Dabei ist wird das 1. eingefügte Element zur Wurzel des Baumes.
+
+Folgende Abbildung erläutert wie sich Insert zu verhalten hat und wie ein Binärer Baum sich aufbaut.
+
+![Insert und Binärer Baum](./png/BinärerBaumInsert.png)
+
+<div class="page-break"></div>
+
+Als nächstes soll die Methode ReturnValues implementiert werden. Diese Methode gibt alle Element des Baumes 
+als Array zurück. Dieses Array soll genauso groß sein wie Anzahl der Element im Baum.
+
+Dabei soll das Array aufsteigend sortiert sein. Hierzu kann man entweder die Implementierung von dem 5 Aufgabenblatt hernehmen unter
+2\. Sortierung eines Arrays. Es kann stattdessen die Array.Sort Funktion aus dem Namespace System der .Net Core Library.
+
+**Deklaration:**
+
+```C#
+public class NumberBinaryTree
+{
+    public void Insert(int number) {}
+    public int[] ReturnValues() {}
+}
+
+```
+
+---
+
+*Test Program:*
+
+```C#
+var numberQueue = new NumberBinaryTree();
+Console.WriteLine(GetStringArray(numberQueue.ReturnValues()));
+numberQueue.Insert(2);
+Console.WriteLine(GetStringArray(numberQueue.ReturnValues()));
+numberQueue.Insert(5);
+numberQueue.Insert(-8);
+Console.WriteLine(GetStringArray(numberQueue.ReturnValues()));
+numberQueue.Insert(12);
+numberQueue.Insert(222);
+numberQueue.Insert(-222);
+Console.WriteLine(GetStringArray(numberQueue.ReturnValues()));
+```
+
+*Ausgabe sollte sein:*
+
+[] \
+[ 2 ] \
+[ -8 2 5 ] \
+[ -222 -8 2 5 12 222 ]
+
+---
+
+<div class="page-break"></div>
+
+
+## 2. Implementierung Property Count
+
+**Beschreibung:**
+
+Das Property Count gibt die Anzahl aller Elemente im Baum aus. Dieses Property ist nur eine Getter
+
+**Deklaration:**
+
+```C#
+public int Count { get; }
+```
+
+---
+
+*Test Program:*
+
+```C#
+var numberQueue = new NumberBinaryTree();
+Console.WriteLine($"numberQueue.Count = {numberQueue.Count}");
+numberQueue.Insert(2);
+Console.WriteLine($"numberQueue.Count = {numberQueue.Count}");
+numberQueue.Insert(4);
+numberQueue.Insert(8);
+numberQueue.Insert(-20);
+numberQueue.Insert(0);
+Console.WriteLine($"numberQueue.Count = {numberQueue.Count}");
+```
+
+*Ausgabe sollte sein:*
+
+numberQueue.Count = 0 \
+numberQueue.Count = 1 \
+numberQueue.Count = 5
+
+---
+
+<div class="page-break"></div>
+
+
+## 3. Implementierung Property Maximum
+
+**Beschreibung:**
+
+Das Property Maximum gibt den größte Wert im Baum aus. Dieses Property ist nur eine Getter.
+
+**Deklaration:**
+
+```C#
+public int Maximum
+```
+
+---
+
+*Test Program:*
+
+```C#
+var numberQueue = new NumberBinaryTree();
+numberQueue.Insert(2);
+Console.WriteLine($"numberQueue.Maximum = {numberQueue.Maximum}");
+numberQueue.Insert(4);
+Console.WriteLine($"numberQueue.Maximum = {numberQueue.Maximum}");
+numberQueue.Insert(-4);
+numberQueue.Insert(-84);
+Console.WriteLine($"numberQueue.Maximum = {numberQueue.Maximum}");     
+numberQueue.Insert(200);
+Console.WriteLine($"numberQueue.Maximum = {numberQueue.Maximum}");
+```
+
+*Ausgabe sollte sein:*
+
+numberQueue.Maximum = 2 \
+numberQueue.Maximum = 4 \
+numberQueue.Maximum = 4 \
+numberQueue.Maximum = 200
+
+---
+
+<div class="page-break"></div>
+
+
+## 4. Implementierung Property Maximum
+
+**Beschreibung:**
+
+Das Property Minimum gibt den kleinsten Wert im Baum aus. Dieses Property ist nur eine Getter.
+
+**Deklaration:**
+
+```C#
+public int Minimum
+```
+
+---
+
+*Test Program:*
+
+```C#
+var numberQueue = new NumberBinaryTree();
+numberQueue.Insert(2);
+Console.WriteLine($"numberQueue.Minimum = {numberQueue.Minimum}");
+numberQueue.Insert(4);
+Console.WriteLine($"numberQueue.Minimum = {numberQueue.Minimum}");
+numberQueue.Insert(-4);
+numberQueue.Insert(-84);
+Console.WriteLine($"numberQueue.Minimum = {numberQueue.Minimum}");
+```
+
+*Ausgabe sollte sein:*
+
+numberQueue.Minimum = 2 \
+numberQueue.Minimum = 2 \
+numberQueue.Minimum = -84 
+
+---
+
+<div class="page-break"></div>
+
