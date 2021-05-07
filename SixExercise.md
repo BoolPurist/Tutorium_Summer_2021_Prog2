@@ -6,9 +6,19 @@
 Um das Thema erweiterbare Datenstrukturen abzuschließen werden hier noch zu Teilen einen Binäre Baum implementieren.
 Diese Datenstrukturen erlauben besonderes effiziente Suchen oder Sortierung von Sequenzen.
 
+Was ist ein Binär Baum:
+
+![Binär Baum](./png/BinärerBaum.png)
+
+Der oberste Knoten ist die Wurzel. Die Wurzel ist immer das zuerst hinzugefügte Element.
+Jeder Knoten kann 0 bis 2 Kinder haben.
+Das Kind welches kleiner ist als der Elternknoten kommt nach links.
+Das Kind welches größer ist als der Elternknoten kommt nach rechts.
+
+<div class="page-break"></div>
 
 Bei den Testprogrammen werden wir auf eine bereits erstellte Implementierung von GetStringArray aus dem
-5\.Aufgabenblatt zugreifen. Der Code ist hier unten bei gefügt:
+5\.Aufgabenblatt zugreifen. Der Code ist hier unten beigefügt:
 
 ```C#
 static string GetStringArray(int[] array)
@@ -31,16 +41,20 @@ static string GetStringArray(int[] array)
 }
 ```
 
+<div class="page-break"></div>
+
 ## 1. Implementierung der Methoden  Insert und ReturnValues in Klasse NumberBinaryTree
 
 **Beschreibung:**
 
 Der Name der Klasse lautet NumberBinaryTree. 
 
+Tipp: Rekrution kann bei einigen Implementierungen in diesem Aufgabenblatt sehr nützlich sein.
+
 Es soll zuerst die Methode Insert implementiert werden. Diese Methode soll eine Integer annehmen und diesen als Node
 in einen Binären Baum eingefügt werden. Dabei ist wird das 1. eingefügte Element zur Wurzel des Baumes.
 
-Folgende Abbildung erläutert wie sich Insert zu verhalten hat und wie ein Binärer Baum sich aufbaut.
+Folgende Abbildung verdeutlicht wie sich Insert zu verhalten hat.
 
 ![Insert und Binärer Baum](./png/BinärerBaumInsert.png)
 
@@ -173,7 +187,7 @@ numberQueue.Maximum = 200
 <div class="page-break"></div>
 
 
-## 4. Implementierung Property Maximum
+## 4. Implementierung Property Minimum
 
 **Beschreibung:**
 
