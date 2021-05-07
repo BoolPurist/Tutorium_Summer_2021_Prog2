@@ -10,7 +10,7 @@ Wenn ein Repository für Lösungen verfügbar wird, dann wird hier und in Moodle
 - [3. Übung](./ClassPractice.md)
 - [4. Übung](./Fourth_Exercise.md)
 - [5. Übung](./Fifth_Exercise.md)
-- [6. Übung](./SixExercise.md)
+- [6. Übung](./SixthExercise.md)
 
 
 ## Links zu Lösungen
