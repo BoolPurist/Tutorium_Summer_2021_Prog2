@@ -11,6 +11,7 @@ Wenn ein Repository für Lösungen verfügbar wird, dann wird hier und in Moodle
 - [4. Übung](./Fourth_Exercise.md)
 - [5. Übung](./Fifth_Exercise.md)
 - [6. Übung](./SixthExercise.md)
+- [7. Übung](./Exercise_7.md)
 
 
 ## Links zu Lösungen
