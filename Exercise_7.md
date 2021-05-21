@@ -197,6 +197,8 @@ Es sollen folgender Konstruktoren implementiert werden.
 Property Surface soll den Umfang eines Quaders zurückgeben.
 Property Volume soll das Volumen eines Quaders zurückgeben.
 
+Es soll eine public Property Height geben welches als Getter und Setter für die Höhe des Quaders dient.
+
 Es soll für das Property Height auch eine Exception geworfen werden wie
 bei Length oder Width in der Klasse Rectangle
 
@@ -213,6 +215,8 @@ Ausgabe: \
 Length: 78, Width: 45,234, Height: 7845
 
 ---
+
+<div class="page-break"></div>
 
 *Test Program:*
 
