@@ -6,7 +6,7 @@
 **Beschreibung:**
 
 Es soll eine Klasse Rectangle implementiert werden. Diese soll von der Klasse Shape erben.
-Die Klasse Shape 2 soll Properties, Surface und Volume, als Implementierung verlangen aber sie nicht selber liefern.
+Die Klasse Shape soll 2 Properties, Surface und Volume, als Implementierung verlangen aber sie nicht selber liefern.
 
 Property Surface gibt die den Umfang einer Form, Shape, aus als Getter.
 Property Volume gibt die Fläche/Volumen einer Form aus als Getter.
@@ -50,7 +50,7 @@ Length: 78, Width: 45,234
 Tipps: Deklarationen sind dieses mal nicht direkt angeben. Hier muss man selbst darauf kommen
 wie diese aussehen anhand der Aufgabenbeschreibung.
 
-Das Keyword virtual und abstract wird benötigt wegen dem Polymorphismus
+Die Keywords virtual, override und abstract werden eventuell wegen dem Polymorphismus gebraucht.
 
 ---
 
@@ -163,19 +163,19 @@ catch (ArgumentOutOfRangeException e)
 *Ausgabe sollte sein:*
 
 Error Message: Parameter must not be not negative (Parameter 'Width') \
-Actual value was 0. \
+Actual value was -2. \
 Name of wrong Parameter: Width \
-Wrong Value: 0 \
+Wrong Value: -2 \
 ================================================== \
 Error Message: Parameter must not be not negative (Parameter 'Length') \
-Actual value was 0. \
+Actual value was -2. \
 Name of wrong Parameter: Length \
-Wrong Value: 0 \
+Wrong Value: -2 \
 ================================================== \
 Error Message: Parameter must not be not negative (Parameter 'Length') \
-Actual value was 0. \
+Actual value was -2. \
 Name of wrong Parameter: Length \
-Wrong Value: 0
+Wrong Value: -2
 
 ---
 
@@ -255,9 +255,9 @@ cuboid.Surface = 220 \
 cuboid.Volume = 200 \
 ================================================== \
 Error Message: Parameter must not be not negative (Parameter 'Height') \
-Actual value was 5. \
+Actual value was -2. \
 Name of wrong Parameter: Height \
-Wrong Value: 5 
+Wrong Value: -2 
 
 ---
 
