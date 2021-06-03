@@ -65,7 +65,9 @@ function endWithError(message) {
 async function createMdFile() {
     const outputPath = path.resolve('./', firstArg + '.md');
     try {
+        
         console.log(`Creating md file ${outputPath}`);
+        
         await fsp.writeFile(outputPath, startTemplate);
     } catch (error) {
         endWithError(error);
