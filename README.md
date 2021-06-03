@@ -13,6 +13,7 @@ Wenn ein Repository für Lösungen verfügbar wird, dann wird hier und in Moodle
 - [6. Übung](./SixthExercise.md)
 - [7. Übung](./Exercise_7.md)
 - [8. Übung](./Exercise_8.md)
+- [9. Übung](./Exercise_9.md)
 
 
 ## Links zu Lösungen
