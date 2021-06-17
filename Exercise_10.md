@@ -15,7 +15,7 @@ Die Klasse soll 3 Dinge von außen zur Verfügung stellen.
 
 - Methode Push: Soll einen Wert vom Typ G als Parameter annehmen und diesen an das Ender der innere Liste anhängen.
 - Methode Pop: Soll den Wert vom letzten Element Typ G aus der inneren Liste zurück gegeben. Danach soll das letzte Element auch aus der List entfernt werden. Sollte die Liste bereits leer sein sollte eine Exception geworfen werden.
-- Methode Empty: Liefert true zurück falls der Stack gerade kein Element beinhaltet. Ansonsten soll false zurückgeliefert werden.
+- Property Empty: Liefert true zurück falls der Stack gerade kein Element beinhaltet. Ansonsten soll false zurückgeliefert werden.
 
 ---
 
