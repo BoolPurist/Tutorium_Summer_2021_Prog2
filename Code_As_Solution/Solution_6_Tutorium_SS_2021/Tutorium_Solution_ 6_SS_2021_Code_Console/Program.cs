@@ -9,7 +9,6 @@ namespace Tutorium_Solution__6_SS_2021_Code_Console
     static void Main(string[] args)
     {
       
-
     }
 
     static void TestInsertAndGetArray()

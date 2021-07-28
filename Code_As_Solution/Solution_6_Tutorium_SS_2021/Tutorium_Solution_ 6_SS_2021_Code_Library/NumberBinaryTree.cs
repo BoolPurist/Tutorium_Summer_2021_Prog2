@@ -67,8 +67,7 @@ namespace ClassLibrary_Solution_6_Tutorium_SS_2021
         return;
       }
 
-      ProcessCurrentNode(number, _root);
-      
+      ProcessCurrentNode(number, _root);      
     }
 
     public int[] ReturnValues()
@@ -77,9 +76,7 @@ namespace ClassLibrary_Solution_6_Tutorium_SS_2021
       
       AppendCurrentNode(queue, _root);
 
-      var sortedQueueArray = queue.ToArray();
-
-      Array.Sort<int>(sortedQueueArray);
+      var sortedQueueArray = queue.ToArray();      
 
       return sortedQueueArray;
     }
@@ -135,9 +132,8 @@ namespace ClassLibrary_Solution_6_Tutorium_SS_2021
       }
       else
       {
-        queue.Enqueue(currentNode.Value);
-
         AppendCurrentNode(queue, currentNode.Left);
+        queue.Enqueue(currentNode.Value);
         AppendCurrentNode(queue, currentNode.Right);
       }
     }
@@ -153,34 +149,6 @@ namespace ClassLibrary_Solution_6_Tutorium_SS_2021
         currentCount++;
         CountCurrentNode(currentNode.Left, ref currentCount);
         CountCurrentNode(currentNode.Right, ref currentCount);
-      }
-    }
-
-    private void CompareNodeForMax(Node currentNode, ref int currentMax)
-    {
-      if (currentNode == null)
-      {
-        return;
-      }
-      else
-      {
-        currentMax = Math.Max(currentNode.Value, currentMax);
-        CompareNodeForMax(currentNode.Left, ref currentMax);
-        CompareNodeForMax(currentNode.Right, ref currentMax);
-      }
-    }
-
-    private void CompareNodeForMin(Node currentNode, ref int currentMin)
-    {
-      if (currentNode == null)
-      {
-        return;
-      }
-      else
-      {
-        currentMin = Math.Min(currentNode.Value, currentMin);
-        CompareNodeForMin(currentNode.Left, ref currentMin);
-        CompareNodeForMin(currentNode.Right, ref currentMin);
       }
     }
 

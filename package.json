@@ -5,9 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "mdToPdf": "node ./js/convertMdToPdf.js",
-    "createMdFile": "node ./js/templateMd.js",
-    "appendToMdFile": "node ./js/templateMd.js appendTo"
+    "mdToPdf": "node ./js_helper_scripts/convertMdToPdf.js",
+    "createMdFile": "node ./js_helper_scripts/templateMd.js",
+    "appendToMdFile": "node ./js_helper_scripts/templateMd.js appendTo"
   },
   "repository": {
     "type": "git",

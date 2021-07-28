@@ -63,8 +63,7 @@ Folgende Abbildung verdeutlicht wie sich Insert zu verhalten hat.
 Als nächstes soll die Methode ReturnValues implementiert werden. Diese Methode gibt alle Element des Baumes 
 als Array zurück. Dieses Array soll genauso groß sein wie Anzahl der Element im Baum.
 
-Dabei soll das Array aufsteigend sortiert sein. Hierzu kann man entweder die Implementierung von dem 5 Aufgabenblatt hernehmen unter
-2\. Sortierung eines Arrays. Es kann stattdessen die Array.Sort Funktion aus dem Namespace System der .Net Core Library.
+Dabei soll das Array aufsteigend sortiert sein.
 
 **Deklaration:**
 
