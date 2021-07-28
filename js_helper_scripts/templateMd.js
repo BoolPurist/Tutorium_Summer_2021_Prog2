@@ -67,8 +67,18 @@ async function createMdFile() {
     try {
         
         console.log(`Creating md file ${outputPath}`);
+        try 
+        {
+            const fileStats = await fsp.stat(outputPath);
+            endWithError(`File "${firstArg}" already exits !`);          
+        }
+        catch(error)
+        {
+            if (error.code === 'ENOENT') {
+                await fsp.writeFile(outputPath, startTemplate);
+            }
+        }
         
-        await fsp.writeFile(outputPath, startTemplate);
     } catch (error) {
         endWithError(error);
     }
@@ -90,7 +100,12 @@ async function appendToMdFile() {
             }
 
         } catch(error) {
-            endWithError(error);
+            if (error.code === 'ENOENT') {
+                endWithError(`File "${secondArg}" does not exits`);
+            }
+            else {
+                endWithError(error);
+            }
         }
     } else {
         endWithError("No name for the md file which the template is to be appended to");
