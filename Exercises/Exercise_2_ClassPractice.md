@@ -1,4 +1,4 @@
-# ClassPractice
+# 2. Übungsblatt, Thema: ClassPractice
 
 ## 1 Define class Product
 

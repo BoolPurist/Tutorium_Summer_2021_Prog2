@@ -4,9 +4,8 @@ const path = require('path');
 const  { mdToPdf }  = require('md-to-pdf');
 
 const excludedFiles = [ "README.md" ];
-const npmLocation = path.resolve('./');
-const outputPath = path.join(npmLocation, 'pdf');
-const cwd = path.dirname(process.argv[1]);
+const npmLocation = path.resolve('./Exercises');
+const outputPath = path.resolve('./pdf');
 
 (async() => {
 
@@ -30,8 +29,9 @@ const cwd = path.dirname(process.argv[1]);
 
         const pathToPdf = path.join(outputPath, mdFile.replace(".md", ".pdf"));
         const pathToMd = path.join(npmLocation, mdFile);
+        console.log(`pathToMd: ${pathToMd}`);
         console.log(`Creating ${pathToPdf} from ${pathToMd}`);
-        const pdfFile = await mdToPdf({path: mdFile});
+        const pdfFile = await mdToPdf({path: pathToMd});
         await fs.writeFile(pathToPdf, pdfFile.content);
     });
 })();

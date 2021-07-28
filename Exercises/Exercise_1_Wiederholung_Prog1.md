@@ -1,4 +1,4 @@
-# Übung in Prog 2, Thema: Wiederholung aus Prog 1.
+# 1. Übungsblatt, Thema: Prog 1.
 
 ## 1 Nachimplementierung der Funktion Math.Clamp aus der .Net Core Library
 

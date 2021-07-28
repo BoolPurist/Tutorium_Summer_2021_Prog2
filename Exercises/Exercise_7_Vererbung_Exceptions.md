@@ -1,5 +1,4 @@
-
-# 7. Übung Thema: Vererbung und Exceptions
+# 7. Übungsblatt Thema: Vererbung und Exceptions
 
 ## 1. Implementierung von Rectangle
 

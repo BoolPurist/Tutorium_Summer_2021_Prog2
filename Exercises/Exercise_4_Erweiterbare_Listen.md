@@ -1,4 +1,4 @@
-# 4. Übung / Thema erweiterbare Listen mit Hilfe der Klasse TextCollection.
+# 5. Übungsblatt, Thema: Erweiterbare Listen.
 
 **Einleitung:**
 
@@ -23,7 +23,6 @@ Tipp:
 - Es ist ratsam eine innere Klasse der Klasse TextCollection zu schreiben. Diese innere Klasse sollte ein Element der Liste verwalten. Damit kann man dan auch Vorgänger und Nachfolger eines Elements in der Liste mit abspeichern.
 
 - Es kann sehr hilfreich sein den Anfang der Liste als Variable zu speichern.
-
 
 **Declaration:**
 

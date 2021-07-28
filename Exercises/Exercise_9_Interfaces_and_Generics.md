@@ -1,5 +1,4 @@
-
-# 9. Übung Thema: Noch mehr Interfaces und 1. Nutzung von Generics
+# 9. Übungsblatt Thema: Advanced Interfaces and Generics
 
 **Einführung:**
 

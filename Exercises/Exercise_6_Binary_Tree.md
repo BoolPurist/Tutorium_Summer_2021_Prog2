@@ -1,5 +1,5 @@
 
-# 6. Übung Thema: Binärer Baum
+# 6. Übungsblatt Thema: Binärer Baum
 
 **Einführung:**
 

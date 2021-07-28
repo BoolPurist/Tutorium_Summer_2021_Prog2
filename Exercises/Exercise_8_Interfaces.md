@@ -1,5 +1,4 @@
-
-# 8. Übung Thema: Interfaces
+# 8. Übungsblatt Thema: Interfaces
 
 **Einführung:**
 

@@ -1,6 +1,4 @@
-
-# 10. Übungsblatt
-
+# 10. Übungsblatt Thema: Generic Stack and Delegates
 
 ## Implementierung eines generischen Stacks
 

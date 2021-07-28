@@ -1,4 +1,4 @@
-# 2. Übung, Thema: Operator Overloading
+# 3. Übungsblatt, Thema: Operator Overloading
 
 ## Einfügung
 
