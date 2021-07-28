@@ -1,4 +1,4 @@
-# 5. Übungsblatt, Thema: Erweiterbare Listen.
+# 4. Übungsblatt, Thema: Erweiterbare Listen.
 
 **Einleitung:**
 
