@@ -65,28 +65,31 @@ namespace Solution_11_Tutorium_SS_2021_Library
     }
 
     // Method which is registered under the event Collision under the class Level
-    public virtual void OnCollision(Entity entity, MoveDirection direction)
-    {      
-      // Revert the position of an object
-      // Move it back to the right
-      if (direction == MoveDirection.Left)
+    public virtual void OnCollision(Entity self, Entity other, MoveDirection direction)
+    {
+      if (self == this)
       {
-        _x++;
-      }
-      // Move it back to the left
-      else if (direction == MoveDirection.Right)
-      {
-        _x--;
-      }
-      // Move it back downwards
-      else if (direction == MoveDirection.Up)
-      {
-        _y++;
-      }
-      // Move it back upwards
-      else
-      {
-        _y--;
+        // Revert the position of an object
+        // Move it back to the right
+        if (direction == MoveDirection.Left)
+        {
+          _x++;
+        }
+        // Move it back to the left
+        else if (direction == MoveDirection.Right)
+        {
+          _x--;
+        }
+        // Move it back downwards
+        else if (direction == MoveDirection.Up)
+        {
+          _y++;
+        }
+        // Move it back upwards
+        else
+        {
+          _y--;
+        }
       }
     }
 

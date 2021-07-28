@@ -114,6 +114,7 @@ var level = new Level(5, 5);
 level.AddEntity(new Entity(0, 0));
 level.AddEntity(new Entity(2, 2));
 level.AddEntity(new Entity(2, 3));
+Console.WriteLine(level.ToString());
 ```
 Ausgabe: \
 x.... \
@@ -271,15 +272,31 @@ Console.WriteLine(level.ToString());
 
 Als nächstes soll sicher gestellt werden, dass sich eine Entität nicht außerhalb des Levels bewegen kann.
 
-Lege ein neues Event an namens Collision vom Type Movement an, in der Klasse Level.
+Lege einen neuen delegate an
+
+Declaration von delegate Collision:
+```C#
+public delegate void Collision(Entity self,Entity other, MoveDirection moveDirection);
+
+public class Level
+{
+  ...
+
+```
+
+Lege ein neues Event an namens LevelCollision vom Type Collision an, in der Klasse Level.
+
 Innerhalb von der Methode OnMove soll das Event Collision gefeuert werden, falls eine Entität sich außerhalb des Levels bewegt. 
-Hierbei soll der 1. Parameter null sein, damit eine Collision durch das Verlassen des Levels aufgezeigt wird. 
-Außerhalb bedeutet, dass die neue Position der Entität eine OutOfBoundException des inneren 2d Arrays in der Level würde. 
+Hierbei soll der 1. Parameter die Entität sein, welche sich bewegt hat. Der 2. Parameter soll hier erstmal null sein. 
+Dadurch das der 2. Parameter null ist, wird angezeigt eine Collision durch das Verlassen des Levels stattfand. 
+Der 3. Parameter ist die Richtung der Bewegung.
+Außerhalb bedeutet, dass die neue Position der Entität eine OutOfBoundException des inneren 2d Arrays in der Level erzeugen würde. 
 
 Lege ein Methode namens OnCollision an in der Klasse Entity.
 OnCollision soll auch virtuell sein.
 Bei der Methode AddEntity soll sich eine Entity für das Event Collision regestieren mit der Methode OnCollision.
-Diese Methode OnCollision soll die Entität wieder in die Position bringen welche vor Bewegung vorlag.
+Diese Methode OnCollision soll die Entität wieder in die Position bringen welche vor Bewegung vorlag, falls der 1. Parameter die Entität selbst ist.
+Das heißt, dass wenn sich mehre Entitäten für das Event Collision registriert haben, dann soll sich nur die eine Entitäten, welche die Bewegung ausführte, darauf reagieren.
 
 ---
 
@@ -322,14 +339,16 @@ Als nächstes soll eine Kollision zwischen Game Objekten implementiert werden.
 Das heist Objekt A kann nicht an der gleichen Stelle wie Objekte B stehen !
 Wenn also Objekt A sich in Objekt B hineinbewegt, dann soll Objekt A sich wieder in seine vorige Position zurück bewegen.
 
-2 Klassen Obstacle und Player werden angelegt. Diese beider Klassen erben von Klasse Entity
+2 Klassen Obstacle und Player werden angelegt. Diese beiden Klassen erben von Klasse Entity
 
 Player Klasse soll das Property Identifier überschreiben ,so dass der Wert 'P' ist.
 Obstacle Klasse soll das Property Identifier überschreiben ,so dass der Wert '#' ist
 
 In der Methode OnMove in der Klasse Level soll geprüft werden ob die neue Position im Level schon bereits besetzt ist durch eine
 andere Entität. In diesem Fall, soll das Event Collision unter der Klasse Level gefeuert werden. 
-Der 1. Parameter des gefeuerten Events soll die Entität sein welche sich schon an der neuen Position befindet vor der Bewegung.
+Der 1. Parameter des gefeuerten Events soll die Entität sein welche sich bewegt hat.
+Der 2. Parameter ist die Entität, welche sich schon an der neuen Stelle befindet.
+Der 3. Parameter ist die Richtung der Bewegung.
 
 ---
 
@@ -409,7 +428,7 @@ public class Player
 }
 ```
 
-Enemy Klasse soll das Property Identifier überschreiben ,so dass der Wert 'E' ist.
+Enemy Klasse soll das Property Identifier überschreiben, so dass der Wert 'E' ist.
 
 Die Klasse Player soll das öffentliche Event HasDied haben. Diese Event 
 ist vom Type EntityAction welche ein delegate ist. 
@@ -418,12 +437,14 @@ Die Klasse Player soll nun eine Methode Die haben, welche das Event HasDied feue
 Beim feuern diese Events übergibt sich die Instanze sich selbst als Parameter.
 
 Die Klasse Enemy soll seine Methode OnCollision überschreiben.
-Falls der 1. Parameter entity sich in den Type Player casten lässt, dann soll die Methode Die von der entity als Player Instanz 
+Falles der 1. Parameter der Gegner selbst ist und
+falls der 2. Parameter entity sich in den Type Player casten lässt, dann soll die Methode Die von der entity als Player Instanz 
 aufgerufen werden.
 Ansonsten soll die Collision wie vorher durchgeführt werden.
 
 Die Klasse Player soll seine Methode OnCollision überschreiben.
-Falls der 1. Parameter entity sich in den Type Enemy casten lässt, dann soll die Instanz ihre eigene Die Methode aufrufen.
+Falles der 1. Parameter der Player selbst ist und
+falls der 2. Parameter entity sich in den Type Enemy casten lässt, dann soll die Instanz ihre eigene Die Methode aufrufen.
 
 In der Methode AddEntity in der Klasse Level soll noch folgendes passieren.
 Falls der Parameter newEntity sich in den Typ Player casten lässt, dann soll unter dem Event HasDied der Player Instanz eine Methode regiestiert werden.
@@ -458,7 +479,7 @@ Console.WriteLine(level.ToString());
 ....\
 \
 Game over\
-Player died at Position (2, 2)\
+Player died at Position (2, 1)\
 ....\
 ....\
 ..E.\

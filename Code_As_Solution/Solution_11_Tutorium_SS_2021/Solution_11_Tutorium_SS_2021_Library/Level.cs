@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Solution_11_Tutorium_SS_2021_Library
 {
+
+  public delegate void Collision(Entity self,Entity other, MoveDirection moveDirection);
+
   public class Level
   {
     private char _standardTile = '.';
@@ -16,7 +19,7 @@ namespace Solution_11_Tutorium_SS_2021_Library
     private Entity[,] _tileMap;
 
     // This should be fired if one object moves into another object
-    public event Movement Collision;
+    public event Collision LevelCollision;
 
     // Creating a level which is 2d array.
     public Level(int height,int width)
@@ -33,7 +36,7 @@ namespace Solution_11_Tutorium_SS_2021_Library
       newEntity.HasMoved += this.OnMove;
       // Added game object pays attention if the level detects a collision after the movement of the added object
       // collision means that 2 objects are in the same location
-      this.Collision += newEntity.OnCollision;
+      this.LevelCollision += newEntity.OnCollision;
 
       // The added entity is the player of the game
       if (newEntity is Player player)
@@ -42,24 +45,27 @@ namespace Solution_11_Tutorium_SS_2021_Library
         // An anonymous function, lambda is added as a reaction to this event
         player.HasDied += (Entity diedPlayer) => 
         {
-          // Announcing the game has ended
-          Console.WriteLine("Game over");
-          Console.WriteLine($"Player died at Position ({diedPlayer.X}, {diedPlayer.Y})");
-
-          // Take the player instance out of the level.
-          for (int i = 0; i < _tileMap.GetLength(0); i++)
+          if (diedPlayer is Player)
           {
-            for (int j = 0; j < _tileMap.GetLength(1); j++)
+            // Announcing the game has ended
+            Console.WriteLine("Game over");
+            Console.WriteLine($"Player died at Position ({diedPlayer.X}, {diedPlayer.Y})");
+
+            // Take the player instance out of the level.
+            for (int i = 0; i < _tileMap.GetLength(0); i++)
             {
-              if (_tileMap[i, j] == diedPlayer)
+              for (int j = 0; j < _tileMap.GetLength(1); j++)
               {
-                _tileMap[i, j] = null;
+                if (_tileMap[i, j] == diedPlayer)
+                {
+                  _tileMap[i, j] = null;
+                }
               }
             }
-          }
 
-          // Stop listening for the movement of the player because it is removed from the level
-          player.HasMoved -= this.OnMove;
+            // Stop listening for the movement of the player because it is removed from the level
+            player.HasMoved -= this.OnMove;
+          }
           
         };
       }
@@ -71,7 +77,7 @@ namespace Solution_11_Tutorium_SS_2021_Library
       // Check if game object has moved outside the level
       if (entity.X < 0 || entity.X >= _tileMap.GetLength(1) || entity.Y < 0 || entity.Y >= _tileMap.GetLength(0))
       {
-        Collision?.Invoke(null, direction);
+        LevelCollision?.Invoke(entity, null, direction);
         return;
       }
 
@@ -80,7 +86,7 @@ namespace Solution_11_Tutorium_SS_2021_Library
       // Field is occupied
       if (otherEntity != null)
       {
-        Collision?.Invoke(otherEntity, direction);
+        LevelCollision?.Invoke(entity, otherEntity, direction);
         return;
       }
       

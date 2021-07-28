@@ -21,6 +21,15 @@ namespace Solution_11_Tutorium_SS_2021_Console
       Console.WriteLine(player.ToString());
     }
 
+    public static void TestLevelExample()
+    {
+      var level = new Level(5, 5);
+      level.AddEntity(new Entity(0, 0));
+      level.AddEntity(new Entity(2, 2));
+      level.AddEntity(new Entity(2, 3));
+      Console.WriteLine(level.ToString());
+    }
+
     public static void TestLevel()
     {
       var level = new Level(10, 10);
@@ -64,7 +73,7 @@ namespace Solution_11_Tutorium_SS_2021_Console
     public static void TestCollision()
     {
       var level = new Level(4, 4);
-      level.Collision += (entity, direction) => { Console.WriteLine($"Collision at {entity.X}, {entity.Y}"); };
+      level.LevelCollision += (entity, other, direction) => { Console.WriteLine($"Collision at {other.X}, {other.Y}"); };
       var player = new Player(1, 1);
       level.AddEntity(player);
       level.AddEntity(new Obstacle(1,2));
@@ -92,12 +101,13 @@ namespace Solution_11_Tutorium_SS_2021_Console
       level.AddEntity(player);
       level.AddEntity(enemy);
       Console.WriteLine(level.ToString());
-      player.MoveRight();      
-      player.MoveDown();
+      enemy.MoveUp();
+      player.MoveRight();
+      enemy.MoveDown();
       Console.WriteLine(level.ToString());
-      player.MoveLeft();
-      
+      player.MoveLeft();      
       Console.WriteLine(level.ToString());
+
     }
   }
 }

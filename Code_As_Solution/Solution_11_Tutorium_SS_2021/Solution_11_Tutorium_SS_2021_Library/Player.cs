@@ -20,19 +20,21 @@ namespace Solution_11_Tutorium_SS_2021_Library
     }
 
 
-    public override void OnCollision(Entity entity, MoveDirection direction)
+    public override void OnCollision(Entity self, Entity other, MoveDirection direction)
     {
-      // If in a new location is an enemy the player dies, the game ends
-      if (entity is Enemy)
+      if (self == this)
       {
-        Die();
-      }
-      else
-      {
-        // Otherwise the player just went outside the level.
-        base.OnCollision(this, direction);
-      }
-
+        // If in a new location is an enemy the player dies, the game ends
+        if (other is Enemy)
+        {
+          Die();
+        }
+        else
+        {
+          // Otherwise the player just went outside the level.
+          base.OnCollision(this, other, direction);
+        }
+      }    
     }
 
     public void Die()

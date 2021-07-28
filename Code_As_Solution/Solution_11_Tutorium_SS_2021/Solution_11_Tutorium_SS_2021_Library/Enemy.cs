@@ -13,17 +13,20 @@ namespace Solution_11_Tutorium_SS_2021_Library
     {
     }
 
-    public override void OnCollision(Entity entity, MoveDirection direction)
+    public override void OnCollision(Entity self,Entity other, MoveDirection direction)
     {
-      // If the enemy moves into the player the player has to die.
-      if (entity is Player player)
+      if (self == this)
       {
-        player.Die();        
-      }      
-      else if (entity == null)
-      {
-        // Otherwise the player just went outside the level.
-        base.OnCollision(this, direction);
+        // If the enemy moves into the player the player has to die.
+        if (other is Player player)
+        {
+          player.Die();
+        }
+        else if (other == null)
+        {
+          // Otherwise the player just went outside the level.
+          base.OnCollision(this, null, direction);
+        }
       }
     }
   }
