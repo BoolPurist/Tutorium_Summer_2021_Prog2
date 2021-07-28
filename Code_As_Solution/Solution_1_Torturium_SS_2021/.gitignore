@@ -1,0 +1,6 @@
+# Folders
+bin/
+obj/
+
+# Visual Studio Config Files
+.vs/

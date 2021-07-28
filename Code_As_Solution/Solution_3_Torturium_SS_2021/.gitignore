@@ -1,0 +1,10 @@
+# IDE and code editors
+.vs
+.vscode
+
+# Folders
+bin
+obj
+
+# Files
+*.log

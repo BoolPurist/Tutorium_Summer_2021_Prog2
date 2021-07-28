@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Tutorium_Solution__5_SS_2021_Code_Library</RootNamespace>
+  </PropertyGroup>
+
+</Project>
