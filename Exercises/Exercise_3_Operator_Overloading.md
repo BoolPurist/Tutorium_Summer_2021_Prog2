@@ -77,7 +77,6 @@ euroMoney.Cents = 10 \
 euroMoney.EuroAmount = 5 \
 Euro: 5, Cents: 10 
 
-
 ---
 
 
@@ -110,10 +109,10 @@ Console.WriteLine($"euroMoney -= summand; euroMoney = {euroMoney}");
 
 ---
 
-euroMoney + summand = Euro: 4, Cents: 30
-euroMoney - summand = Euro: 1, Cents: 30 
-summand - euroMoney = Euro: -1, Cents: -30  
-euroMoney += summand; euroMoney = Euro: 4, Cents: 30 
+euroMoney + summand = Euro: 4, Cents: 30 \
+euroMoney - summand = Euro: 1, Cents: 30  \
+summand - euroMoney = Euro: -1, Cents: -30 \
+euroMoney += summand; euroMoney = Euro: 4, Cents: 30 \
 euroMoney -= summand; euroMoney = Euro: 2, Cents: 80
 
 ---
@@ -137,9 +136,9 @@ Console.WriteLine($"120 - 200 = {120 - euro}");
 
 ---
 
-0 + 60 = Euro: 0, Cents: 60  
-120 + 0 = Euro: 1, Cents: 20  
-0 + 240 = Euro: -2, Cents: -40  
+0 + 60 = Euro: 0, Cents: 60  \
+120 + 0 = Euro: 1, Cents: 20  \
+0 + 240 = Euro: -2, Cents: -40 \
 120 - 200 = Euro: 0, Cents: -80
 
 ---
@@ -162,7 +161,7 @@ Console.WriteLine($"euroMoney++; euroMoney = {euroMoney}");
 
 ---
 
-euroMoney++; euroMoney = Euro: 0, Cents: 1  
+euroMoney++; euroMoney = Euro: 0, Cents: 1  \
 euroMoney++; euroMoney = Euro: 0, Cents: -1
 
 ---
@@ -197,8 +196,8 @@ if (!(bool)negativeEuro)
 
 ---
 
-totalCents = 200  
-Euro is positive  
+totalCents = 200  \
+Euro is positive  \
 Euro is negative
 
 ---

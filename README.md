@@ -66,7 +66,7 @@ npm run createMdFile \< Name von neuen Markdown File \>
 Beispiel: \
 npm run createMdFile newMDFile
 
-Wirkung: \ 
+Wirkung: \
 Erstellt einen neuen Markdown file mit in einer typische Vorlage für eine 1. Aufgabe des Aufgabenblatt
 
 ---
