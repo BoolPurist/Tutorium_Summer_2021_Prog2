@@ -22,12 +22,13 @@ public Euro(long totalCents)
 - Parameter *"totalCents"* ist hierbei die Anzahl von cents wenn auch der Euro Betrag in cents umgerechnet wird.
 
 > **Beispiel:** Ein Geldbetrag 2,50 euro = new Euro(2L, 50L);
+> > **Beispiel:** Ein Geldbetrag 2,50 euro = new Euro(250);
 
 
-**Property TotalCents** soll folgendermassen deklariert werden.
+**Property TotalCents** soll folgeadermassen deklariert werden.
 
 ```C#
-public long TotalCents { get; private set; }
+public long TotalCents { get; }
 ```
 
 Dieses Property soll den Geld Betrag, komplet umgerechnet in Cents, zurück gegeben. 
@@ -36,6 +37,7 @@ Dieses Property soll den Geld Betrag, komplet umgerechnet in Cents, zurück gege
 
 **Property EuroAmount:** soll ausserhalb abrufbar sein aber nicht veränderbar sein. Der Wert soll vom Typ **long** sein. Der Wert entspricht der Anzahl von Euros ohne der restlichen Cents.
 
+**Property TotalCents** soll eine reiner Getter sein. Dabei entspricht der Wert den gesamten Geldbetrag ausgedrückt in Cents. Zum Beispiel kommt bei 3,20 Euro, genau 320 raus. 
 
 The Method ToString gibt eine textuelle Representation von Geldbetrag zurück
 > **Beispiel:** new Euro(2L, 5L).ToString() = "Euro: 2, Cents: 5";
@@ -128,7 +130,7 @@ Euro euro = new Euro(0L);
 
 Console.WriteLine($"0 + 60 = {euro + 60}");
 Console.WriteLine($"120 + 0 = {120 + euro}");
-Console.WriteLine($"0 + 240 = {euro - 240}");
+Console.WriteLine($"0 - 240 = {euro - 240}");
 euro += 200;
 Console.WriteLine($"120 - 200 = {120 - euro}");
 ```
