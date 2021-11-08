@@ -16,7 +16,13 @@ Diese Attribute sollen ausserhalb der Klasse abgerufen werden können aber nicht
 Attribute welche auch ausserhalb der Klasse noch verändert werden sollen.
 
 - Number (Anzahl des Produktes)
----gi
+---
+
+Es soll ein Konstruktor geschrieben werden. Welche 3 Arguemente annimmt. 
+
+* 1. Parameter ist der Name des Produktes. 
+* 2. Parameter ist der Preis des Produktes.
+* 3. Parameter ist die Anzahl des Produktes.
 
 *Test Program:*
 
