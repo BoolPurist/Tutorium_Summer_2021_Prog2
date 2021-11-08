@@ -22,7 +22,8 @@ public Euro(long totalCents)
 - Parameter *"totalCents"* ist hierbei die Anzahl von cents wenn auch der Euro Betrag in cents umgerechnet wird.
 
 > **Beispiel:** Ein Geldbetrag 2,50 euro = new Euro(2L, 50L);
-> > **Beispiel:** Ein Geldbetrag 2,50 euro = new Euro(250);
+
+> **Beispiel:** Ein Geldbetrag 2,50 euro = new Euro(250L);
 
 
 **Property TotalCents** soll folgeadermassen deklariert werden.
@@ -49,17 +50,17 @@ Euro euroMoney = new Euro(5L, 30L);
 Console.WriteLine($"euroMoney.TotalCents = {euroMoney.TotalCents}");
 Console.WriteLine($"euroMoney.Cents = {euroMoney.Cents}");
 Console.WriteLine($"euroMoney.EuroAmount = {euroMoney.EuroAmount}");
-Console.WriteLine(euroMoney);
+Console.WriteLine(euroMoney.ToString());
 euroMoney = new Euro(-2L, 10L);
 Console.WriteLine($"euroMoney.TotalCents = {euroMoney.TotalCents}");
 Console.WriteLine($"euroMoney.Cents = {euroMoney.Cents}");
 Console.WriteLine($"euroMoney.EuroAmount = {euroMoney.EuroAmount}");
-Console.WriteLine(euroMoney);
+Console.WriteLine(euroMoney.ToString());
 euroMoney = new Euro(510L);
 Console.WriteLine($"euroMoney.TotalCents = {euroMoney.TotalCents}");
 Console.WriteLine($"euroMoney.Cents = {euroMoney.Cents}");
 Console.WriteLine($"euroMoney.EuroAmount = {euroMoney.EuroAmount}");
-Console.WriteLine(euroMoney);
+Console.WriteLine(euroMoney.ToString());
 ```
 
 *Ausgabe sollte folgendes sein:*
@@ -103,19 +104,19 @@ Console.WriteLine($"euroMoney - summand = {euroMoney - summand}");
 Console.WriteLine($"summand - euroMoney = {summand - euroMoney}");
 
 euroMoney += summand;
-Console.WriteLine($"euroMoney += summand; euroMoney = {euroMoney}");
+Console.WriteLine($"euroMoney += summand; euroMoney = {euroMoney.ToString()}");
 euroMoney -= summand;
-Console.WriteLine($"euroMoney -= summand; euroMoney = {euroMoney}");
+Console.WriteLine($"euroMoney -= summand; euroMoney = {euroMoney.ToString()}");
 ```
 
 *Ausgabe:*
 
 ---
 
-euroMoney + summand = Euro: 4, Cents: 30
-euroMoney - summand = Euro: 1, Cents: 30 
-summand - euroMoney = Euro: -1, Cents: -30  
-euroMoney += summand; euroMoney = Euro: 4, Cents: 30 
+euroMoney + summand = Euro: 4, Cents: 30 \
+euroMoney - summand = Euro: 1, Cents: 30 \
+summand - euroMoney = Euro: -1, Cents: -30 \
+euroMoney += summand; euroMoney = Euro: 4, Cents: 30 \
 euroMoney -= summand; euroMoney = Euro: 2, Cents: 80
 
 ---
@@ -154,10 +155,10 @@ Nun soll der Operator ++ und -- noch implementiert werden.
 Euro euroMoney = new Euro(0L);
 
 euroMoney++;
-Console.WriteLine($"euroMoney++; euroMoney = {euroMoney}");
+Console.WriteLine($"euroMoney++; euroMoney = {euroMoney.ToString()}");
 euroMoney--;
 euroMoney--;
-Console.WriteLine($"euroMoney++; euroMoney = {euroMoney}");
+Console.WriteLine($"euroMoney++; euroMoney = {euroMoney.ToString()}");
 ```
 
 *Ausgabe:*
