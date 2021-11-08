@@ -48,7 +48,7 @@ static void PrintList(TextCollection collection)
             Console.WriteLine($"Element {count}: {element}");
             count++;
         }
-        Console.WriteLine(new String('=', 30));
+        Console.WriteLine(new String('@', 30));
     }
     else
     {
@@ -283,8 +283,8 @@ PrintList(collection);
 
 **Erwarteter Output:**
 
-Testing RemoveAt \ 
-Element 0: 0 \ 
+Testing RemoveAt \
+Element 0: 0 \
 Element 1: 1 \
 Element 2: 2 \
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \
