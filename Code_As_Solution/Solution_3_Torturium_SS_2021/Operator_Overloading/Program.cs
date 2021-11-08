@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Second_Exercise
+namespace Operator_Overloading
 {
   class Program
   {

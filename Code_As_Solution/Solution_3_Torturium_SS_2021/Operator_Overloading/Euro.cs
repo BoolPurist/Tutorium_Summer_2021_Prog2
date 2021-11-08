@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Second_Exercise
+namespace Operator_Overloading
 {
   public class Euro
   {

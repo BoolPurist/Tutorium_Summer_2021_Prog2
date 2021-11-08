@@ -9,7 +9,8 @@ namespace ClassPractice
       
     }
 
-    static void TestTask0() {
+    static void TestTask0() 
+    {
       Product dummyProduct = new Product("Dummy", 0.0, 0);
       Product dummyProduct1 = new Product("Dummy", 0.0, 0);
       Product product = new Product("TV", 8000.0, 2);
