@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Solution_4_Torturium_SS_2021
+namespace Solution_4_Tutorium_SS_2021
 {
   // Ist nichts anderes als eine Liste von Elementen
   public class TextCollection

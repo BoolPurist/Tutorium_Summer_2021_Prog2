@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Solution_4_Torturium_SS_2021
+namespace Solution_4_Tutorium_SS_2021
 {
   class Program
   {
