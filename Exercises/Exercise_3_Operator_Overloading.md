@@ -23,11 +23,13 @@ public Euro(long totalCents)
 
 > **Beispiel:** Ein Geldbetrag 2,50 euro = new Euro(2L, 50L);
 
+> **Beispiel:** Ein Geldbetrag 2,50 euro = new Euro(250L);
 
-**Property TotalCents** soll folgendermassen deklariert werden.
+
+**Property TotalCents** soll folgeadermassen deklariert werden.
 
 ```C#
-public long TotalCents { get; private set; }
+public long TotalCents { get; }
 ```
 
 Dieses Property soll den Geld Betrag, komplet umgerechnet in Cents, zurück gegeben. 
@@ -36,6 +38,7 @@ Dieses Property soll den Geld Betrag, komplet umgerechnet in Cents, zurück gege
 
 **Property EuroAmount:** soll ausserhalb abrufbar sein aber nicht veränderbar sein. Der Wert soll vom Typ **long** sein. Der Wert entspricht der Anzahl von Euros ohne der restlichen Cents.
 
+**Property TotalCents** soll eine reiner Getter sein. Dabei entspricht der Wert den gesamten Geldbetrag ausgedrückt in Cents. Zum Beispiel kommt bei 3,20 Euro, genau 320 raus. 
 
 The Method ToString gibt eine textuelle Representation von Geldbetrag zurück
 > **Beispiel:** new Euro(2L, 5L).ToString() = "Euro: 2, Cents: 5";
@@ -47,17 +50,17 @@ Euro euroMoney = new Euro(5L, 30L);
 Console.WriteLine($"euroMoney.TotalCents = {euroMoney.TotalCents}");
 Console.WriteLine($"euroMoney.Cents = {euroMoney.Cents}");
 Console.WriteLine($"euroMoney.EuroAmount = {euroMoney.EuroAmount}");
-Console.WriteLine(euroMoney);
+Console.WriteLine(euroMoney.ToString());
 euroMoney = new Euro(-2L, 10L);
 Console.WriteLine($"euroMoney.TotalCents = {euroMoney.TotalCents}");
 Console.WriteLine($"euroMoney.Cents = {euroMoney.Cents}");
 Console.WriteLine($"euroMoney.EuroAmount = {euroMoney.EuroAmount}");
-Console.WriteLine(euroMoney);
+Console.WriteLine(euroMoney.ToString());
 euroMoney = new Euro(510L);
 Console.WriteLine($"euroMoney.TotalCents = {euroMoney.TotalCents}");
 Console.WriteLine($"euroMoney.Cents = {euroMoney.Cents}");
 Console.WriteLine($"euroMoney.EuroAmount = {euroMoney.EuroAmount}");
-Console.WriteLine(euroMoney);
+Console.WriteLine(euroMoney.ToString());
 ```
 
 *Ausgabe sollte folgendes sein:*
@@ -100,9 +103,9 @@ Console.WriteLine($"euroMoney - summand = {euroMoney - summand}");
 Console.WriteLine($"summand - euroMoney = {summand - euroMoney}");
 
 euroMoney += summand;
-Console.WriteLine($"euroMoney += summand; euroMoney = {euroMoney}");
+Console.WriteLine($"euroMoney += summand; euroMoney = {euroMoney.ToString()}");
 euroMoney -= summand;
-Console.WriteLine($"euroMoney -= summand; euroMoney = {euroMoney}");
+Console.WriteLine($"euroMoney -= summand; euroMoney = {euroMoney.ToString()}");
 ```
 
 *Ausgabe:*
@@ -110,7 +113,7 @@ Console.WriteLine($"euroMoney -= summand; euroMoney = {euroMoney}");
 ---
 
 euroMoney + summand = Euro: 4, Cents: 30 \
-euroMoney - summand = Euro: 1, Cents: 30  \
+euroMoney - summand = Euro: 1, Cents: 30 \
 summand - euroMoney = Euro: -1, Cents: -30 \
 euroMoney += summand; euroMoney = Euro: 4, Cents: 30 \
 euroMoney -= summand; euroMoney = Euro: 2, Cents: 80
@@ -127,7 +130,7 @@ Euro euro = new Euro(0L);
 
 Console.WriteLine($"0 + 60 = {euro + 60}");
 Console.WriteLine($"120 + 0 = {120 + euro}");
-Console.WriteLine($"0 + 240 = {euro - 240}");
+Console.WriteLine($"0 - 240 = {euro - 240}");
 euro += 200;
 Console.WriteLine($"120 - 200 = {120 - euro}");
 ```
@@ -151,10 +154,10 @@ Nun soll der Operator ++ und -- noch implementiert werden.
 Euro euroMoney = new Euro(0L);
 
 euroMoney++;
-Console.WriteLine($"euroMoney++; euroMoney = {euroMoney}");
+Console.WriteLine($"euroMoney++; euroMoney = {euroMoney.ToString()}");
 euroMoney--;
 euroMoney--;
-Console.WriteLine($"euroMoney++; euroMoney = {euroMoney}");
+Console.WriteLine($"euroMoney++; euroMoney = {euroMoney.ToString()}");
 ```
 
 *Ausgabe:*
