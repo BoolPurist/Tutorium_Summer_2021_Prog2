@@ -123,13 +123,13 @@ Console.WriteLine(GetStringArray(array));
 
 Es soll eine Klasse namens NumberQueue erstellt werden. Diese Klasse soll eine Queue darstellen.
 
-Elemente befinden sich in der Queue und jedes Element hat einen Wert.
+Elemente befinden sich in der Queue als Container und jedes Element hat einen Wert.
 Innerhalb der Queue wird mit Elementen gearbeitet. Außerhalb der Klasse werden Werte übergeben und erhalten.
 
 Es soll als erstes die 2 Methoden Enqueue und ToNumberArray implementiert werden.
 
 Bei Enqueue soll ein Integrer Wert angenommen werden. Nach der Ausführung soll sich ein Element mit diesen Integrer Wert am Ende 
-der Queue befinden.
+der Queue als Liste befinden.
 
 Bei ToNumberArray soll ein Array zurück gegeben werden. Diese Array soll alle Werte der Queue enthalten. Wichtig ist, dass die Queue nach der Ausführung unverändert bleibt. Array soll nur so groß sein wie die Anzahl der Werte in der Queue.
 
@@ -176,8 +176,8 @@ Console.WriteLine(GetStringArray(queue.ToNumberArray()));
 
 **Beschreibung:**
 
-Nun soll eine Method Dequeue implementiert werden. Nach der Ausführung soll der Wert von dem letztem Element zurück gegeben werden.
-Nach der Ausführung soll das letzte Element aus der Queue entfernt sein.
+Nun soll eine Method Dequeue implementiert werden. Nach der Ausführung soll der Wert von dem 1. Element zurück gegeben werden.
+Nach der Ausführung soll das 1. Element aus der Queue entfernt sein.
 
 **Deklaration:**
 

@@ -49,10 +49,10 @@ static string GetStringArray(int[] array)
 
 Der Name der Klasse lautet NumberBinaryTree. 
 
-Tipp: Rekrution kann bei einigen Implementierungen in diesem Aufgabenblatt sehr nützlich sein.
+Tipp: Rekursion kann bei einigen Implementierungen in diesem Aufgabenblatt sehr nützlich sein.
 
-Es soll zuerst die Methode Insert implementiert werden. Diese Methode soll eine Integer annehmen und diesen als Node
-in einen Binären Baum eingefügt werden. Dabei ist wird das 1. eingefügte Element zur Wurzel des Baumes.
+Es soll zuerst die Methode Insert implementiert werden. Diese Methode soll einen Integer annehmen und eine Node mit diesen Wert
+in einen Binären Baum eingefügen. Dabei wird das 1. eingefügte Element zur Wurzel des Baumes.
 
 Folgende Abbildung verdeutlicht wie sich Insert zu verhalten hat.
 

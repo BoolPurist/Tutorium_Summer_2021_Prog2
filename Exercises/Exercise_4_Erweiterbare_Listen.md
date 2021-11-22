@@ -2,7 +2,7 @@
 
 **Einleitung:**
 
-Um erweiterbare Datenstruktur zu verstehen ist am Besten selber diese zu implementieren. Wir wollen eine Klasse namens *TextCollection* schreiben. Diese Klasse soll in der Lage sein, beliebige viele Elemente zu verwalten. Dabei verwaltet es strings als Werte. Wenn von einer Liste gesprochen wird, dann ist damit eine Instance der Klasse TextCollection gemeint.
+Um erweiterbare Datenstruktur zu verstehen ist es am Besten selber diese zu implementieren. Wir wollen eine Klasse namens *TextCollection* schreiben. Diese Klasse soll in der Lage sein, beliebige viele Elemente zu verwalten. Dabei verwaltet es strings als Werte. Wenn von einer Liste gesprochen wird, dann ist damit eine Instance der Klasse TextCollection gemeint. TextCollection kann entweder als einfache oder doppelte verkette Liste implementiert werden.
 
 ## 1. Implementierung von Method Append und GetArray
 
