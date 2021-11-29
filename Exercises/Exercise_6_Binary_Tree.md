@@ -60,8 +60,9 @@ Folgende Abbildung verdeutlicht wie sich Insert zu verhalten hat.
 
 <div class="page-break"></div>
 
-Als nächstes soll die Methode ReturnValues implementiert werden. Diese Methode gibt alle Element des Baumes 
-als Array zurück. Dieses Array soll genauso groß sein wie Anzahl der Element im Baum.
+Als nächstes soll die Methode ReturnValues implementiert werden. Diese Methode gibt alle Element des Baumes.
+als Array zurück. Dieses Array soll genauso groß sein wie Anzahl der Element im Baum. Es kann dabei die Funktion Array.Sort verwendet werden.
+Es kann die Implementierung von **NumberQueue** aus dem 5. Aufgabenblatt verwendet werden oder auch die **C# class Queue<int>** unter dem Namespace **System.Collections.Generic** .
 
 Dabei soll das Array aufsteigend sortiert sein.
 

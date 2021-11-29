@@ -52,7 +52,7 @@ Console.WriteLine(GetStringArray(array));
 
 Nun soll die Sortierung eines Arrays vorgenommen werden. Diese Function soll eine gegebenes Array direkt sortieren.
 
-Diese Function soll der übersichtshalber statisch in einer Klasse Namens Utility geschrieben werden.
+Diese Function soll der aus Gründen der Übersicht statisch in einer Klasse Namens Utility geschrieben werden.
 
 Tipp: 
 Es gibt viele Wege eine Array zu sortieren. Eine einfache Variante ein Array zu sortieren 

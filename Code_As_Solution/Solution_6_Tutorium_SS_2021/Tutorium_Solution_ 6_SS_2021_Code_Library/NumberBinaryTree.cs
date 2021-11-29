@@ -76,7 +76,8 @@ namespace ClassLibrary_Solution_6_Tutorium_SS_2021
       
       AppendCurrentNode(queue, _root);
 
-      var sortedQueueArray = queue.ToArray();      
+      var sortedQueueArray = queue.ToArray();
+      Array.Sort(sortedQueueArray);
 
       return sortedQueueArray;
     }
