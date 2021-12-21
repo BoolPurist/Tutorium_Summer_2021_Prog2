@@ -8,7 +8,7 @@ namespace Solution_7_Tutorium_SS_2021_Library.Geometry
 {
   public class Rectangle : Shape
   {
-    protected const string ERROR_MESSAGE = "Parameter must not be not negative";
+    protected const string ERROR_MESSAGE = "Parameter must not be negative";
 
     public override double Surface => 2 * this.Width + 2 * this.Length;
 

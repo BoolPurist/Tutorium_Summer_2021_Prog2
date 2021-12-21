@@ -108,9 +108,9 @@ eine ArgumentOutOfRangeException geworfen werden.
 
 Beim werfen der Exception soll gewährtleistet werden das:
 
-- Die Exception soll im Property ParamName den Name der Property haben unter den die Exception passierte.
+- Die Exception soll im Property ParamName den Name der Property haben unter der Exception geworfen ist.
 - Die Exception soll im Property ActualValue den negativen Wert haben, der die Exception auslöste.
-- Die Exception soll im Property Message folgende Fehlermeldung haben "Parameter must not be not negative".
+- Die Exception soll im Property Message folgende Fehlermeldung haben "Parameter must not be negative".
 
 ---
 
@@ -161,17 +161,17 @@ catch (ArgumentOutOfRangeException e)
 
 *Ausgabe sollte sein:*
 
-Error Message: Parameter must not be not negative (Parameter 'Width') \
+Error Message: Parameter must not be negative (Parameter 'Width') \
 Actual value was -2. \
 Name of wrong Parameter: Width \
 Wrong Value: -2 \
 ================================================== \
-Error Message: Parameter must not be not negative (Parameter 'Length') \
+Error Message: Parameter must not be negative (Parameter 'Length') \
 Actual value was -2. \
 Name of wrong Parameter: Length \
 Wrong Value: -2 \
 ================================================== \
-Error Message: Parameter must not be not negative (Parameter 'Length') \
+Error Message: Parameter must not be negative (Parameter 'Length') \
 Actual value was -2. \
 Name of wrong Parameter: Length \
 Wrong Value: -2
@@ -193,7 +193,7 @@ Es sollen folgender Konstruktoren implementiert werden.
 2. Konstruktor bekommt einen Parameter. Die Instance Länge, Breite und Höhe sind gleich.
 3. Konstruktor bekommt drei Parameter. Der 1\. Parameter ist die Länge, der 2\. Parameter ist die Breite und der 3\. Parameter ist die Höhe von der Instance.
 
-Property Surface soll den Umfang eines Quaders zurückgeben.
+Property Surface soll die Fläche eines Quaders zurückgeben.
 Property Volume soll das Volumen eines Quaders zurückgeben.
 
 Es soll eine public Property Height geben welches als Getter und Setter für die Höhe des Quaders dient.
