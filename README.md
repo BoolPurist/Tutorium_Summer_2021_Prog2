@@ -28,10 +28,23 @@ Diese Bilder enstanden aus den Diagrammen im Unterordner ["draw_io_diagramms"](.
 
 Lösungen liegen als Code bereit unter dem Ordner ["Code_As_Solution"](./Code_As_Solution)
 
+## Themen mit den man sich nach Prog2 beschäftigen kann
+
+Unit Tests: Unglaublich wichtig für die Praxis.
+
+[Was sind Unit Tests](https://www.guru99.com/unit-testing-guide.html)
+
+Am besten lernt man Unit tests durch das Anwenden eines Frameworks für Unit Tests.
+
+2 Sehr beliebte Frameworks dafür sind
+
+1. [NUnit](https://nunit.org/)
+2. [XUnit](https://xunit.net/)
+
 ## Aufzeigen von Fehlern/Bugs
 
 Sollte du einen Fehler/Bug in den Materiellen gefunden haben.
-Kannst du ein Issue aufmachen dazu aufmachen, damit ich dann darauf regieren kann.
+Kannst du ein Issue dazu aufmachen, damit ich dann darauf den Fehler beheben kann.
 
 ## Scripts als Hilfe zur Erstellung der Unterlagen.
 
