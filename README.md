@@ -43,7 +43,7 @@ Am besten lernt man Unit tests durch das Anwenden eines Frameworks für Unit Tes
 
 ## Aufzeigen von Fehlern/Bugs
 
-Sollte du einen Fehler/Bug in den Materiellen gefunden haben.
+Solltest du einen Fehler/Bug in den Materiellen gefunden haben.
 Kannst du ein Issue dazu aufmachen, damit ich dann darauf den Fehler beheben kann.
 
 ## Scripts als Hilfe zur Erstellung der Unterlagen.
